@@ -1,15 +1,5 @@
-<p align="center">
-  <strong>
-    <span style="color: #000000;">R</span><span style="color: #75BFAF;">A</span><span style="color: #75BFAF;">I</span><span style="color: #000000;">L</span>
-  </strong>
-</p>
-
 <h3 align="center">Responsible AI Labs</h3>
-
-<p align="center">
-  Evaluate, monitor, and improve the safety and fairness of AI systems.<br/>
-  API-first. 8 dimensions. Production-ready.
-</p>
+                             
 
 <p align="center">
   <a href="https://pypi.org/project/rail-score-sdk/">
@@ -43,8 +33,7 @@
   <a href="https://docs.responsibleailabs.ai">Docs</a> &middot;
   <a href="https://pypi.org/project/rail-score-sdk/">PyPI</a> &middot;
   <a href="https://www.npmjs.com/package/@responsible-ai-labs/rail-score">npm</a> &middot;
-  <a href="https://huggingface.co/responsible-ai-labs">HuggingFace</a> &middot;
-  <a href="https://arxiv.org/abs/2505.00204">Paper</a>
+
 </p>
 
 ---
@@ -154,19 +143,6 @@ print(response.rail_score)  # Full 8-dimension evaluation attached
 
 ---
 
-## Integrations
-
-RAIL plugs into your existing stack:
-
-| Integration | What it does |
-|---|---|
-| **Langfuse** | Trace-level RAIL scores in your observability pipeline |
-| **LiteLLM** | `RAILGuardrail` for the LiteLLM proxy |
-| **OpenTelemetry** | Export to Datadog, Grafana, Jaeger, or any OTEL backend |
-| **OpenAI / Anthropic / Gemini** | Drop-in LLM wrappers that score every response |
-| **React / Next.js / Vue.js** | JS SDK works across frontend frameworks |
-
----
 
 ## Compliance coverage
 
@@ -201,6 +177,7 @@ RAIL is the only evaluation platform where India DPDP Act and India AI Governanc
 |---|---|
 | Website | [responsibleailabs.ai](https://responsibleailabs.ai) |
 | Documentation | [docs.responsibleailabs.ai](https://docs.responsibleailabs.ai) |
+| Knowledge Hub | [knowledge.responsibleailabs.ai](https://knowledge.responsibleailabs.ai)  |
 | PyPI | [pypi.org/project/rail-score-sdk](https://pypi.org/project/rail-score-sdk/) |
 | npm | [npmjs.com/package/@responsible-ai-labs/rail-score](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) |
 | HuggingFace | [huggingface.co/responsible-ai-labs](https://huggingface.co/responsible-ai-labs) |
