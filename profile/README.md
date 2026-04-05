@@ -16,13 +16,13 @@
     <img src="https://img.shields.io/pypi/v/rail-score-sdk?style=flat-square&label=PyPI&color=75BFAF" alt="PyPI Version" />
   </a>
   <a href="https://pypi.org/project/rail-score-sdk/">
-    <img src="https://img.shields.io/pypi/dm/rail-score-sdk?style=flat-square&label=PyPI%20Downloads&color=2D6B5A" alt="PyPI Downloads" />
+    <img src="https://img.shields.io/pepy/dt/rail-score-sdk?style=flat-square&label=PyPI%20Total%20Downloads&color=2D6B5A" alt="PyPI Total Downloads" />
   </a>
   <a href="https://www.npmjs.com/package/@responsible-ai-labs/rail-score">
     <img src="https://img.shields.io/npm/v/@responsible-ai-labs/rail-score?style=flat-square&label=npm&color=75BFAF" alt="npm Version" />
   </a>
   <a href="https://www.npmjs.com/package/@responsible-ai-labs/rail-score">
-    <img src="https://img.shields.io/npm/dm/@responsible-ai-labs/rail-score?style=flat-square&label=npm%20Downloads&color=2D6B5A" alt="npm Downloads" />
+    <img src="https://img.shields.io/npm/dt/@responsible-ai-labs/rail-score?style=flat-square&label=npm%20Total%20Downloads&color=2D6B5A" alt="npm Total Downloads" />
   </a>
   <a href="https://www.drupal.org/project/rail_score">
     <img src="https://img.shields.io/badge/Drupal-rail__score-0678BE?style=flat-square&logo=drupal&logoColor=white" alt="Drupal" />
@@ -75,8 +75,8 @@ Each evaluation returns per-dimension scores, confidence levels, issue detection
 
 | Package | Registry | Install |
 |---|---|---|
-| **Python SDK** | [![PyPI](https://img.shields.io/pypi/v/rail-score-sdk?style=flat-square&color=75BFAF)](https://pypi.org/project/rail-score-sdk/) [![Downloads](https://img.shields.io/pypi/dm/rail-score-sdk?style=flat-square&color=2D6B5A)](https://pypi.org/project/rail-score-sdk/) | `pip install rail-score-sdk` |
-| **JavaScript/TypeScript SDK** | [![npm](https://img.shields.io/npm/v/@responsible-ai-labs/rail-score?style=flat-square&color=75BFAF)](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) [![Downloads](https://img.shields.io/npm/dm/@responsible-ai-labs/rail-score?style=flat-square&color=2D6B5A)](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) | `npm install @responsible-ai-labs/rail-score` |
+| **Python SDK** | [![PyPI](https://img.shields.io/pypi/v/rail-score-sdk?style=flat-square&color=75BFAF)](https://pypi.org/project/rail-score-sdk/) [![Downloads](https://img.shields.io/pepy/dt/rail-score-sdk?style=flat-square&color=2D6B5A)](https://pypi.org/project/rail-score-sdk/) | `pip install rail-score-sdk` |
+| **JavaScript/TypeScript SDK** | [![npm](https://img.shields.io/npm/v/@responsible-ai-labs/rail-score?style=flat-square&color=75BFAF)](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) [![Downloads](https://img.shields.io/npm/dt/@responsible-ai-labs/rail-score?style=flat-square&color=2D6B5A)](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) | `npm install @responsible-ai-labs/rail-score` |
 | **Drupal Module** | [![Drupal](https://img.shields.io/badge/drupal.org-rail__score-0678BE?style=flat-square&logo=drupal&logoColor=white)](https://www.drupal.org/project/rail_score) | `composer require drupal/rail_score` |
 
 ### Provider extras (Python)
