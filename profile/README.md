@@ -1,8 +1,8 @@
 <h3 align="center">Responsible AI Labs</h3>
 
 <p align="center">
-  <strong>Developer-first responsible AI evaluation.</strong><br/>
-  RAIL Score — an API for LLM safety, compliance (GDPR, EU AI Act, India DPDP, HIPAA), red-teaming, and safe regeneration. SDKs for Python, JavaScript, and Drupal.
+  <strong>Deep-tech for responsible AI.</strong><br/>
+  We build developer tools, publish open research, and shape AI governance — with a first-class focus on India's regulatory landscape. LLM safety, compliance (GDPR, EU AI Act, India DPDP, HIPAA), red-teaming, and safe regeneration.
 </p>
 
 <p align="center">
@@ -31,12 +31,26 @@
 </p>
 
 <p align="center">
-  <sub>If RAIL helps you ship safer AI, a star on <a href="https://github.com/Responsible-AI-Labs/rail-score-sdk">rail-score-sdk</a> keeps the roadmap funded.</sub>
+  <sub>If our work helps you ship safer AI, a star on <a href="https://github.com/Responsible-AI-Labs/rail-score-sdk">rail-score-sdk</a> keeps the roadmap funded.</sub>
 </p>
 
 ---
 
-## What is RAIL?
+## About Responsible AI Labs
+
+A deep-tech AI startup making artificial intelligence safer and more accountable. We operate across three fronts:
+
+| | |
+|---|---|
+| **Products** | **[RAIL Score](#rail-score--our-flagship-platform)** — an API and SDKs (Python, JavaScript, Drupal) for LLM evaluation, guardrails, compliance, and red-teaming |
+| **Open Research** | Peer-reviewable methodology on [arXiv](https://arxiv.org/abs/2505.00204) and public datasets on [Hugging Face](https://huggingface.co/responsible-ai-labs) — [RAIL-HH-10K](https://huggingface.co/datasets/responsible-ai-labs/RAIL-HH-10K) and the [Indian Responsible AI Benchmark](https://huggingface.co/datasets/responsible-ai-labs/indian-responsible-ai-benchmark) |
+| **Governance & policy** | Native support for India DPDP Act and India AI Governance alongside GDPR, HIPAA, EU AI Act, and CCPA — the only evaluation platform in which India-specific frameworks are first-class |
+
+Built in India, built for everywhere. Reach us at [responsibleailabs.ai](https://responsibleailabs.ai).
+
+---
+
+## RAIL Score — our flagship platform
 
 RAIL Score is an API-first platform that evaluates AI-generated content across **8 independent dimensions** on a 0-10 scale:
 
@@ -45,6 +59,24 @@ RAIL Score is an API-first platform that evaluates AI-generated content across *
 Each evaluation returns per-dimension scores, confidence levels, issue detection, and actionable improvement suggestions. Not a single opaque number — a full diagnostic.
 
 Built for teams shipping production LLM applications who need measurable, auditable safety, guardrails, and regulatory compliance inside their existing stack: drop-in provider wrappers, middleware, policy thresholds, multi-turn sessions, agent tool-call evaluation, prompt-injection detection, and single-call compliance across GDPR, HIPAA, EU AI Act, CCPA, India DPDP, and India AI Governance.
+
+### How it flows
+
+```mermaid
+flowchart LR
+    App["Your App"] --> RAIL["RAIL Score API"]
+    RAIL --> Eval["Evaluate<br/>8 dimensions"]
+    RAIL --> Comp["Compliance<br/>GDPR · HIPAA · EU AI Act<br/>DPDP · CCPA · India AI Gov"]
+    RAIL --> RT["Red-team<br/>prompt injection · agent eval"]
+    Eval --> Gate{thresholds met?}
+    Comp --> Gate
+    RT --> Gate
+    Gate -- yes --> Pass["✓ Ship to user"]
+    Gate -- no --> Regen["Safe-regenerate<br/>evaluate → improve → retry"]
+    Regen --> Eval
+    classDef brand fill:#75BFAF,stroke:#2D6B5A,color:#0A2A22;
+    class RAIL brand;
+```
 
 ### Core capabilities
 
@@ -137,7 +169,7 @@ print(response.rail_score)  # Full 8-dimension evaluation attached
 
 ## Compliance coverage
 
-RAIL tests 63 requirements across 6 regulatory frameworks in a single API call:
+RAIL Score tests 63 requirements across 6 regulatory frameworks in a single API call:
 
 | Framework | Requirements | Status |
 |---|---|---|
@@ -148,11 +180,11 @@ RAIL tests 63 requirements across 6 regulatory frameworks in a single API call:
 | India DPDP Act | 9 | Supported |
 | India AI Governance | 9 | Supported |
 
-RAIL is the only evaluation platform where **India DPDP Act** and **India AI Governance** are native, first-class compliance frameworks alongside GDPR, HIPAA, EU AI Act, and CCPA.
+RAIL Score is the only evaluation platform where **India DPDP Act** and **India AI Governance** are native, first-class compliance frameworks alongside GDPR, HIPAA, EU AI Act, and CCPA.
 
 ---
 
-## Why RAIL
+## Why RAIL Score
 
 - **India-first compliance, globally competitive** — DPDP Act and India AI Governance ship as native frameworks, not bolted-on add-ons
 - **Full diagnostic, not a single score** — eight independent dimensions, each with confidence, issues, and suggestions
