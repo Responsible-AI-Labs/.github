@@ -1,5 +1,9 @@
 <h3 align="center">Responsible AI Labs</h3>
-                             
+
+<p align="center">
+  <strong>Developer-first responsible AI evaluation.</strong><br/>
+  RAIL Score — an API for LLM safety, compliance (GDPR, EU AI Act, India DPDP, HIPAA), red-teaming, and safe regeneration. SDKs for Python, JavaScript, and Drupal.
+</p>
 
 <p align="center">
   <a href="https://pypi.org/project/rail-score-sdk/">
@@ -33,7 +37,11 @@
   <a href="https://docs.responsibleailabs.ai">Docs</a> &middot;
   <a href="https://pypi.org/project/rail-score-sdk/">PyPI</a> &middot;
   <a href="https://www.npmjs.com/package/@responsible-ai-labs/rail-score">npm</a> &middot;
+  <a href="https://github.com/Responsible-AI-Labs/rail-score-sdk/discussions">Discussions</a>
+</p>
 
+<p align="center">
+  <sub>If RAIL helps you ship safer AI, a star on <a href="https://github.com/Responsible-AI-Labs/rail-score-sdk">rail-score-sdk</a> keeps the roadmap funded.</sub>
 </p>
 
 ---
@@ -44,19 +52,23 @@ RAIL Score is an API-first platform that evaluates AI-generated content across *
 
 > **Fairness** · **Safety** · **Reliability** · **Transparency** · **Privacy** · **Accountability** · **Inclusivity** · **User Impact**
 
-Each evaluation returns per-dimension scores, confidence levels, issue detection, and actionable improvement suggestions. Not a single opaque number, but a full diagnostic.
+Each evaluation returns per-dimension scores, confidence levels, issue detection, and actionable improvement suggestions. Not a single opaque number — a full diagnostic.
+
+Built for teams shipping production LLM applications who need measurable, auditable safety, guardrails, and regulatory compliance inside their existing stack: drop-in provider wrappers, middleware, policy thresholds, multi-turn sessions, agent tool-call evaluation, prompt-injection detection, and single-call compliance across GDPR, HIPAA, EU AI Act, CCPA, India DPDP, and India AI Governance.
 
 ### Core capabilities
 
-**Evaluation** -- Score any AI output with basic (~1 credit) or deep (~3 credits) analysis, with custom dimension weights for healthcare, finance, legal, and general contexts.
+**Evaluation** — Score any AI output with basic (~1 credit) or deep (~3 credits) analysis, with custom dimension weights for healthcare, finance, legal, and general contexts.
 
-**Safe Regeneration** -- Evaluate-improve-regenerate loop that runs until your thresholds are met. Server-side or client-side with your own LLM.
+**Safe Regeneration** — Evaluate → improve → regenerate loop that runs until your thresholds are met. Server-side or client-side with your own LLM.
 
-**Compliance Testing** -- 63 requirements across 6 frameworks: GDPR, HIPAA, EU AI Act, CCPA, India DPDP Act, India AI Governance. Single API call.
+**Compliance Testing** — 63 requirements across 6 frameworks: GDPR, HIPAA, EU AI Act, CCPA, India DPDP Act, India AI Governance. Single API call.
 
-**Agent Evaluation** -- Tool call evaluation (ALLOW/FLAG/BLOCK), tool result scanning with PII redaction, and prompt injection detection across 5 attack patterns.
+**Agent Evaluation** — Tool call evaluation (ALLOW/FLAG/BLOCK), tool result scanning with PII redaction, and prompt injection detection across 5 attack patterns.
 
-**Policy Engine & Middleware** -- `RAILMiddleware` wraps any generate function. `PolicyEngine` enforces per-dimension thresholds. `RAILSession` tracks multi-turn risk.
+**Policy Engine & Middleware** — `RAILMiddleware` wraps any generate function. `PolicyEngine` enforces per-dimension thresholds. `RAILSession` tracks multi-turn risk.
+
+**LLM Observability** — Native integration with Langfuse scores, LiteLLM guardrails, OpenAI, Anthropic, and Gemini.
 
 ---
 
@@ -70,7 +82,7 @@ Each evaluation returns per-dimension scores, confidence levels, issue detection
 
 ### Provider extras (Python)
 
-```
+```bash
 pip install rail-score-sdk[openai]       # GPT-4o, GPT-4o-mini
 pip install rail-score-sdk[anthropic]    # Claude 3.5, Claude 3
 pip install rail-score-sdk[google]       # Gemini 1.5 Pro/Flash
@@ -133,17 +145,6 @@ print(response.rail_score)  # Full 8-dimension evaluation attached
 
 ---
 
-## Datasets & Research
-
-| Resource | Description |
-|---|---|
-| [RAIL-HH-10K](https://huggingface.co/datasets/responsible-ai-labs/RAIL-HH-10K) | 10,000 examples with 73 columns of 8-dimension scoring, built on Anthropic's HH dataset |
-| [Indian Responsible AI Benchmark](https://huggingface.co/datasets/responsible-ai-labs/indian-responsible-ai-benchmark) | 212 adversarial prompts across 22 India-specific categories (caste bias, regional sensitivity, linguistic nuance) |
-| [arXiv 2505.00204](https://arxiv.org/abs/2505.00204) | "RAIL in the Wild: Operationalizing Responsible AI Evaluation Using Anthropic's Value Dataset" |
-
----
-
-
 ## Compliance coverage
 
 RAIL tests 63 requirements across 6 regulatory frameworks in a single API call:
@@ -157,17 +158,46 @@ RAIL tests 63 requirements across 6 regulatory frameworks in a single API call:
 | India DPDP Act | 9 | Supported |
 | India AI Governance | 9 | Supported |
 
-RAIL is the only evaluation platform where India DPDP Act and India AI Governance are native, first-class compliance frameworks.
+RAIL is the only evaluation platform where **India DPDP Act** and **India AI Governance** are native, first-class compliance frameworks alongside GDPR, HIPAA, EU AI Act, and CCPA.
+
+---
+
+## Why RAIL
+
+- **India-first compliance, globally competitive** — DPDP Act and India AI Governance ship as native frameworks, not bolted-on add-ons
+- **Full diagnostic, not a single score** — eight independent dimensions, each with confidence, issues, and suggestions
+- **Closed-loop, not read-only** — safe regeneration, policy enforcement, and session-level risk tracking, not just measurement
+- **Fits where developers already work** — drop-in wrappers for OpenAI, Anthropic, Gemini, LiteLLM, and Langfuse; middleware for any generate function
+- **Grounded in research** — peer-reviewable methodology on arXiv (2505.00204) and two public datasets on HuggingFace
+
+---
+
+## Datasets & Research
+
+| Resource | Description |
+|---|---|
+| [RAIL-HH-10K](https://huggingface.co/datasets/responsible-ai-labs/RAIL-HH-10K) | 10,000 examples with 73 columns of 8-dimension scoring, built on Anthropic's HH dataset |
+| [Indian Responsible AI Benchmark](https://huggingface.co/datasets/responsible-ai-labs/indian-responsible-ai-benchmark) | 212 adversarial prompts across 22 India-specific categories (caste bias, regional sensitivity, linguistic nuance) |
+| [arXiv 2505.00204](https://arxiv.org/abs/2505.00204) | "RAIL in the Wild: Operationalizing Responsible AI Evaluation Using Anthropic's Value Dataset" |
 
 ---
 
 ## Repositories
 
-| Repo | Description |
+| Repo | What it's for |
 |---|---|
-| [rail-score-sdk](https://github.com/Responsible-AI-Labs/rail-score-sdk) | Python SDK (sync/async, middleware, batch, sessions, agent eval) |
-| [rail-score-js](https://github.com/Responsible-AI-Labs/rail-score-js) | JavaScript/TypeScript SDK (wrappers, middleware, policy engine, sessions) |
+| [rail-score-sdk](https://github.com/Responsible-AI-Labs/rail-score-sdk) | Python SDK — sync/async client, middleware, batch, sessions, agent eval |
+| [rail-score-js](https://github.com/Responsible-AI-Labs/rail-score-js) | JavaScript/TypeScript SDK — wrappers, middleware, policy engine, sessions |
 | [rail-score-drupal](https://github.com/Responsible-AI-Labs/rail-score-drupal) | Drupal CMS integration module |
+
+---
+
+## Community & support
+
+- **Questions, feature requests, how-to threads** — [GitHub Discussions](https://github.com/Responsible-AI-Labs/rail-score-sdk/discussions)
+- **Bugs and reproducible issues** — [open an issue](https://github.com/Responsible-AI-Labs/rail-score-sdk/issues)
+- **Contributing** — see [CONTRIBUTING.md](https://github.com/Responsible-AI-Labs/rail-score-sdk/blob/main/CONTRIBUTING.md); issues labelled `good first issue` are the easiest starting points
+- **Security disclosures** — see each repo's `SECURITY.md`
 
 ---
 
@@ -177,7 +207,7 @@ RAIL is the only evaluation platform where India DPDP Act and India AI Governanc
 |---|---|
 | Website | [responsibleailabs.ai](https://responsibleailabs.ai) |
 | Documentation | [docs.responsibleailabs.ai](https://docs.responsibleailabs.ai) |
-| Knowledge Hub | [knowledge.responsibleailabs.ai](https://knowledge.responsibleailabs.ai)  |
+| Knowledge Hub | [knowledge.responsibleailabs.ai](https://knowledge.responsibleailabs.ai) |
 | PyPI | [pypi.org/project/rail-score-sdk](https://pypi.org/project/rail-score-sdk/) |
 | npm | [npmjs.com/package/@responsible-ai-labs/rail-score](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) |
 | HuggingFace | [huggingface.co/responsible-ai-labs](https://huggingface.co/responsible-ai-labs) |
@@ -195,3 +225,11 @@ RAIL is the only evaluation platform where India DPDP Act and India AI Governanc
     &nbsp;&middot;&nbsp; Responsible AI Labs Pvt. Ltd. &nbsp;&middot;&nbsp; Built in India, built for everywhere.
   </sub>
 </p>
+
+<!--
+Keywords: responsible ai, llm evaluation, llm guardrails, ai safety, ai governance,
+ai compliance, llm observability, ai red teaming, hallucination detection,
+prompt injection, gdpr compliance, hipaa compliance, eu ai act, india dpdp,
+india ai governance, agent evaluation, langfuse, openai, anthropic, gemini,
+litellm, llmops, python sdk, javascript sdk, drupal module
+-->
