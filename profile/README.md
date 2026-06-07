@@ -43,7 +43,7 @@ A deep-tech AI startup making artificial intelligence safer and more accountable
 | | |
 |---|---|
 | **Products** | **[RAIL Score](#rail-score--our-flagship-platform)** — an API and SDKs (Python, JavaScript, Drupal) for LLM evaluation, guardrails, compliance, and red-teaming |
-| **Open Research** | Peer-reviewable methodology on [arXiv](https://arxiv.org/abs/2505.00204) and public datasets on [Hugging Face](https://huggingface.co/responsible-ai-labs) — [RAIL-HH-10K](https://huggingface.co/datasets/responsible-ai-labs/RAIL-HH-10K) and the [Indian Responsible AI Benchmark](https://huggingface.co/datasets/responsible-ai-labs/indian-responsible-ai-benchmark) |
+| **Open Research** | Peer-reviewable methodology on [arXiv](https://arxiv.org/abs/2505.00204) and public datasets on [Hugging Face](https://huggingface.co/responsible-ai-labs) — the [RAIL Guard Benchmark](https://huggingface.co/datasets/responsible-ai-labs/rail-guard-benchmark), [RAIL-HH-10K](https://huggingface.co/datasets/responsible-ai-labs/RAIL-HH-10K), and the [Indian Responsible AI Benchmark](https://huggingface.co/datasets/responsible-ai-labs/indian-responsible-ai-benchmark) |
 | **Governance & policy** | Native support for India DPDP Act and India AI Governance alongside GDPR, HIPAA, EU AI Act, and CCPA — the only evaluation platform in which India-specific frameworks are first-class |
 
 Built in India, built for everywhere. Reach us at [responsibleailabs.ai](https://responsibleailabs.ai).
@@ -89,6 +89,8 @@ flowchart LR
 **Agent Evaluation** — Tool call evaluation (ALLOW/FLAG/BLOCK), tool result scanning with PII redaction, and prompt injection detection across 5 attack patterns.
 
 **Policy Engine & Middleware** — `RAILMiddleware` wraps any generate function. `PolicyEngine` enforces per-dimension thresholds. `RAILSession` tracks multi-turn risk.
+
+**Configuration & Monitoring** — Read the application's governance policy, plan capabilities, and dimension settings at runtime (`get_config`, `get_capabilities`, `get_dimensions`) for startup checks and observability.
 
 **LLM Observability** — Native integration with Langfuse scores, LiteLLM guardrails, OpenAI, Anthropic, and Gemini.
 
@@ -190,7 +192,7 @@ RAIL Score is the only evaluation platform where **India DPDP Act** and **India 
 - **Full diagnostic, not a single score** — eight independent dimensions, each with confidence, issues, and suggestions
 - **Closed-loop, not read-only** — safe regeneration, policy enforcement, and session-level risk tracking, not just measurement
 - **Fits where developers already work** — drop-in wrappers for OpenAI, Anthropic, Gemini, LiteLLM, and Langfuse; middleware for any generate function
-- **Grounded in research** — peer-reviewable methodology on arXiv (2505.00204) and two public datasets on HuggingFace
+- **Grounded in research** — peer-reviewable methodology on arXiv (2505.00204) and three public benchmarks on HuggingFace, including the RAIL Guard Benchmark for LLM and agent safety
 
 ---
 
@@ -198,6 +200,7 @@ RAIL Score is the only evaluation platform where **India DPDP Act** and **India 
 
 | Resource | Description |
 |---|---|
+| [RAIL Guard Benchmark](https://huggingface.co/datasets/responsible-ai-labs/rail-guard-benchmark) | 1,589 examples for continuous LLM safety evaluation — 1,197 content prompts across 6 domains (benign / edge / adversarial) and 392 agent tool-call scenarios across 5 domains, scored on all 8 RAIL dimensions |
 | [RAIL-HH-10K](https://huggingface.co/datasets/responsible-ai-labs/RAIL-HH-10K) | 10,000 examples with 73 columns of 8-dimension scoring, built on Anthropic's HH dataset |
 | [Indian Responsible AI Benchmark](https://huggingface.co/datasets/responsible-ai-labs/indian-responsible-ai-benchmark) | 212 adversarial prompts across 22 India-specific categories (caste bias, regional sensitivity, linguistic nuance) |
 | [arXiv 2505.00204](https://arxiv.org/abs/2505.00204) | "RAIL in the Wild: Operationalizing Responsible AI Evaluation Using Anthropic's Value Dataset" |
