@@ -11,6 +11,9 @@
   <a href="https://www.drupal.org/project/rail_score">
     <img src="https://img.shields.io/badge/Drupal-rail__score-0678BE?style=flat-square&logo=drupal&logoColor=white" alt="Drupal" />
   </a>
+  <a href="https://github.com/Responsible-AI-Labs/rail-score-mcp">
+    <img src="https://img.shields.io/badge/MCP-server-6E56CF?style=flat-square" alt="MCP Server" />
+  </a>
   <a href="https://arxiv.org/abs/2505.00204">
     <img src="https://img.shields.io/badge/arXiv-2505.00204-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="arXiv" />
   </a>
@@ -27,6 +30,7 @@
   <a href="https://docs.responsibleailabs.ai">Docs</a> &middot;
   <a href="https://pypi.org/project/rail-score-sdk/">PyPI</a> &middot;
   <a href="https://www.npmjs.com/package/@responsible-ai-labs/rail-score">npm</a> &middot;
+  <a href="https://github.com/Responsible-AI-Labs/rail-score-mcp">MCP Server</a> &middot;
   <a href="https://github.com/Responsible-AI-Labs/rail-score-sdk/discussions">Discussions</a>
 </p>
 
@@ -42,7 +46,7 @@ A deep-tech AI startup making artificial intelligence safer and more accountable
 
 | | |
 |---|---|
-| **Products** | **[RAIL Score](#rail-score--our-flagship-platform)** — an API and SDKs (Python, JavaScript, Drupal) for LLM evaluation, guardrails, compliance, and red-teaming |
+| **Products** | **[RAIL Score](#rail-score--our-flagship-platform)** — an API, SDKs (Python, JavaScript, Drupal), and a hosted [MCP server](https://github.com/Responsible-AI-Labs/rail-score-mcp) for LLM evaluation, guardrails, compliance, and red-teaming |
 | **Open Research** | Peer-reviewable methodology on [arXiv](https://arxiv.org/abs/2505.00204) and public datasets on [Hugging Face](https://huggingface.co/responsible-ai-labs) — the [RAIL Guard Benchmark](https://huggingface.co/datasets/responsible-ai-labs/rail-guard-benchmark), [RAIL-HH-10K](https://huggingface.co/datasets/responsible-ai-labs/RAIL-HH-10K), and the [Indian Responsible AI Benchmark](https://huggingface.co/datasets/responsible-ai-labs/indian-responsible-ai-benchmark) |
 | **Governance & policy** | Native support for India DPDP Act and India AI Governance alongside GDPR, HIPAA, EU AI Act, and CCPA — the only evaluation platform in which India-specific frameworks are first-class |
 
@@ -64,7 +68,8 @@ Built for teams shipping production LLM applications who need measurable, audita
 
 ```mermaid
 flowchart LR
-    App["Your App"] --> RAIL["RAIL Score API"]
+    App["Your App / SDK"] --> RAIL["RAIL Score API"]
+    MCP["MCP Client<br/>Claude · Cursor · Copilot"] --> RAIL
     RAIL --> Eval["Evaluate<br/>8 dimensions"]
     RAIL --> Comp["Compliance<br/>GDPR · HIPAA · EU AI Act<br/>DPDP · CCPA · India AI Gov"]
     RAIL --> RT["Red-team<br/>prompt injection · agent eval"]
@@ -88,6 +93,8 @@ flowchart LR
 
 **Agent Evaluation** — Tool call evaluation (ALLOW/FLAG/BLOCK), tool result scanning with PII redaction, and prompt injection detection across 5 attack patterns.
 
+**MCP Server**: A hosted [Model Context Protocol](https://modelcontextprotocol.io) endpoint that adds the full RAIL safety layer to any MCP client (Claude, ChatGPT, Cursor, Copilot, Replit Agent, LangGraph, CrewAI) through a single URL, with no SDK integration. Exposes 8-dimension evaluation, agent tool-call gating, PII scanning, and India DPDP compliance.
+
 **Policy Engine & Middleware** — `RAILMiddleware` wraps any generate function. `PolicyEngine` enforces per-dimension thresholds. `RAILSession` tracks multi-turn risk.
 
 **Configuration & Monitoring** — Read the application's governance policy, plan capabilities, and dimension settings at runtime (`get_config`, `get_capabilities`, `get_dimensions`) for startup checks and observability.
@@ -103,6 +110,7 @@ flowchart LR
 | **Python SDK** | [![PyPI version](https://img.shields.io/pypi/v/rail-score-sdk?style=flat-square&label=pypi&labelColor=2D6B5A&color=75BFAF)](https://pypi.org/project/rail-score-sdk/)[![PyPI downloads](https://img.shields.io/pepy/dt/rail-score-sdk?style=flat-square&label=%E2%86%93&labelColor=75BFAF&color=2D6B5A)](https://pypi.org/project/rail-score-sdk/) | `pip install rail-score-sdk` |
 | **JavaScript/TypeScript SDK** | [![npm version](https://img.shields.io/npm/v/@responsible-ai-labs/rail-score?style=flat-square&label=npm&labelColor=2D6B5A&color=75BFAF)](https://www.npmjs.com/package/@responsible-ai-labs/rail-score)[![npm downloads](https://img.shields.io/npm/dt/@responsible-ai-labs/rail-score?style=flat-square&label=%E2%86%93&labelColor=75BFAF&color=2D6B5A)](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) | `npm install @responsible-ai-labs/rail-score` |
 | **Drupal Module** | [![Drupal](https://img.shields.io/badge/drupal.org-rail__score-0678BE?style=flat-square&logo=drupal&logoColor=white)](https://www.drupal.org/project/rail_score) | `composer require drupal/rail_score` |
+| **MCP Server** | [![MCP](https://img.shields.io/badge/endpoint-hosted-6E56CF?style=flat-square)](https://github.com/Responsible-AI-Labs/rail-score-mcp) | `https://mcp.responsibleailabs.ai/mcp` |
 
 ### Provider extras (Python)
 
@@ -213,6 +221,7 @@ RAIL Score is the only evaluation platform where **India DPDP Act** and **India 
 |---|---|
 | [rail-score-sdk](https://github.com/Responsible-AI-Labs/rail-score-sdk) | Python SDK — sync/async client, middleware, batch, sessions, agent eval |
 | [rail-score-js](https://github.com/Responsible-AI-Labs/rail-score-js) | JavaScript/TypeScript SDK — wrappers, middleware, policy engine, sessions |
+| [rail-score-mcp](https://github.com/Responsible-AI-Labs/rail-score-mcp) | Hosted MCP server: one-URL safety layer for any MCP client, no SDK required |
 | [rail-score-drupal](https://github.com/Responsible-AI-Labs/rail-score-drupal) | Drupal CMS integration module |
 
 ---
@@ -235,6 +244,7 @@ RAIL Score is the only evaluation platform where **India DPDP Act** and **India 
 | Knowledge Hub | [knowledge.responsibleailabs.ai](https://knowledge.responsibleailabs.ai) |
 | PyPI | [pypi.org/project/rail-score-sdk](https://pypi.org/project/rail-score-sdk/) |
 | npm | [npmjs.com/package/@responsible-ai-labs/rail-score](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) |
+| MCP Server | [mcp.responsibleailabs.ai/mcp](https://mcp.responsibleailabs.ai/mcp) |
 | HuggingFace | [huggingface.co/responsible-ai-labs](https://huggingface.co/responsible-ai-labs) |
 | arXiv | [arxiv.org/abs/2505.00204](https://arxiv.org/abs/2505.00204) |
 | X | [@RAILabsIndia](https://x.com/RAILabsIndia) |
@@ -255,6 +265,8 @@ RAIL Score is the only evaluation platform where **India DPDP Act** and **India 
 Keywords: responsible ai, llm evaluation, llm guardrails, ai safety, ai governance,
 ai compliance, llm observability, ai red teaming, hallucination detection,
 prompt injection, gdpr compliance, hipaa compliance, eu ai act, india dpdp,
-india ai governance, agent evaluation, langfuse, openai, anthropic, gemini,
-litellm, llmops, python sdk, javascript sdk, drupal module
+india ai governance, agent evaluation, agent guardrails, tool-call gating,
+pii redaction, mcp server, model context protocol, claude, cursor, copilot,
+langgraph, crewai, langfuse, openai, anthropic, gemini, litellm, llmops,
+python sdk, javascript sdk, typescript sdk, drupal module
 -->
