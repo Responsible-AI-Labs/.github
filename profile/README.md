@@ -241,7 +241,7 @@ RAIL Score is the only evaluation platform where **India DPDP Act** and **India 
 |---|---|
 | Website | [responsibleailabs.ai](https://responsibleailabs.ai) |
 | Documentation | [docs.responsibleailabs.ai](https://docs.responsibleailabs.ai) |
-| Knowledge Hub | [knowledge.responsibleailabs.ai](https://knowledge.responsibleailabs.ai) |
+| Knowledge Hub | [responsibleailabs.ai/knowledge-hub](https://responsibleailabs.ai/knowledge-hub) |
 | PyPI | [pypi.org/project/rail-score-sdk](https://pypi.org/project/rail-score-sdk/) |
 | npm | [npmjs.com/package/@responsible-ai-labs/rail-score](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) |
 | MCP Server | [mcp.responsibleailabs.ai/mcp](https://mcp.responsibleailabs.ai/mcp) |
