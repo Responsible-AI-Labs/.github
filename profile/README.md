@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <a href="https://responsibleailabs.ai">Website</a> &middot;
+  <a href="https://railintelligence.in">Website</a> &middot;
   <a href="https://docs.responsibleailabs.ai">Docs</a> &middot;
   <a href="https://pypi.org/project/rail-score-sdk/">PyPI</a> &middot;
   <a href="https://www.npmjs.com/package/@responsible-ai-labs/rail-score">npm</a> &middot;
@@ -50,7 +50,7 @@ A deep-tech AI startup making artificial intelligence safer and more accountable
 | **Open Research** | Peer-reviewable methodology on [arXiv](https://arxiv.org/abs/2505.00204) and public datasets on [Hugging Face](https://huggingface.co/responsible-ai-labs) — the [RAIL Guard Benchmark](https://huggingface.co/datasets/responsible-ai-labs/rail-guard-benchmark), [RAIL-HH-10K](https://huggingface.co/datasets/responsible-ai-labs/RAIL-HH-10K), and the [Indian Responsible AI Benchmark](https://huggingface.co/datasets/responsible-ai-labs/indian-responsible-ai-benchmark) |
 | **Governance & policy** | Native support for India DPDP Act and India AI Governance alongside GDPR, HIPAA, EU AI Act, and CCPA — the only evaluation platform in which India-specific frameworks are first-class |
 
-Built in India, built for everywhere. Reach us at [responsibleailabs.ai](https://responsibleailabs.ai).
+Built in India, built for everywhere. Reach us at [responsibleailabs.ai](https://railintelligence.in).
 
 ---
 
@@ -239,9 +239,9 @@ RAIL Score is the only evaluation platform where **India DPDP Act** and **India 
 
 | | |
 |---|---|
-| Website | [responsibleailabs.ai](https://responsibleailabs.ai) |
+| Website | [responsibleailabs.ai](https://railintelligence.in) |
 | Documentation | [docs.responsibleailabs.ai](https://docs.responsibleailabs.ai) |
-| Knowledge Hub | [responsibleailabs.ai/knowledge-hub](https://responsibleailabs.ai/knowledge-hub) |
+| Knowledge Hub | [responsibleailabs.ai/knowledge-hub](https://railintelligence.in/knowledge-hub) |
 | PyPI | [pypi.org/project/rail-score-sdk](https://pypi.org/project/rail-score-sdk/) |
 | npm | [npmjs.com/package/@responsible-ai-labs/rail-score](https://www.npmjs.com/package/@responsible-ai-labs/rail-score) |
 | MCP Server | [mcp.responsibleailabs.ai/mcp](https://mcp.responsibleailabs.ai/mcp) |
